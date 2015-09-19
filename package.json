@@ -1,22 +1,22 @@
 {
-  "name": "gulp-cdnizer",
-  "version": "1.1.6",
+  "name": "gulp-cdnfy",
+  "version": "1.1.7",
   "description": "A gulp plugin for replacing local links with CDN links, includes fallbacks and customization",
   "keywords": [
     "gulpplugin",
     "cdn"
   ],
-  "homepage": "https://github.com/OverZealous/gulp-cdnizer",
-  "bugs": "https://github.com/OverZealous/gulp-cdnizer/issues",
+  "homepage": "https://github.com/lzyzsd/gulp-cdnfy",
+  "bugs": "https://github.com/lzyzsd/gulp-cdnfy/issues",
   "author": {
     "name": "Phil DeJarnett",
     "email": "",
-    "url": "https://github.com/OverZealous"
+    "url": "https://github.com/lzyzsd"
   },
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/OverZealous/gulp-cdnizer.git"
+    "url": "git://github.com/lzyzsd/gulp-cdnfy.git"
   },
   "scripts": {
     "test": "istanbul test _mocha --report html -- test/*.js --reporter spec",
@@ -25,7 +25,7 @@
   "dependencies": {
     "through2": "^0.5.1",
     "gulp-util": "^3.0.0",
-    "cdnizer": "^1.1.4"
+    "cdnfy": "^1.1.6"
   },
   "devDependencies": {
     "mocha": "*",
