@@ -1,19 +1,19 @@
 var through = require("through2"),
 	gutil = require("gulp-util"),
-	cdnizer = require('cdnizer');
+	cdnfy = require('cdnfy');
 
 function pluginError(msg) {
-	return new gutil.PluginError("gulp-cdnizer", msg);
+	return new gutil.PluginError("gulp-cdnfy", msg);
 }
 
 module.exports = function(opts) {
 	"use strict";
-	
-	var cdnizerHandler = cdnizer(opts);
+
+	var cdnfyHandler = cdnfy(opts);
 
 
 	//noinspection JSUnusedLocalSymbols
-	function cdnizerStream(file, enc, callback) {
+	function cdnfyStream(file, enc, callback) {
 
 		// Do nothing if no contents
 		if(file.isNull()) {
@@ -29,7 +29,7 @@ module.exports = function(opts) {
 		// check if file.contents is a `Buffer`
 		if(file.isBuffer()) {
 			try {
-				file.contents = new Buffer(cdnizerHandler(String(file.contents)));
+				file.contents = new Buffer(cdnfyHandler(String(file.contents)));
 				this.push(file);
 			} catch(error) {
 				this.emit("error", pluginError(error.toString()))
@@ -38,5 +38,5 @@ module.exports = function(opts) {
 		return callback();
 	}
 
-	return through.obj(cdnizerStream);
+	return through.obj(cdnfyStream);
 };

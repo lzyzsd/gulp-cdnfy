@@ -1,6 +1,6 @@
 {
   "name": "gulp-cdnfy",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "A gulp plugin for replacing local links with CDN links, includes fallbacks and customization",
   "keywords": [
     "gulpplugin",
